@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: i.ryspaev <i.ryspaev@student.42.fr>        +#+  +:+       +#+         #
+#    By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/18 17:00:48 by i.ryspaev         #+#    #+#              #
-#    Updated: 2021/05/18 17:00:51 by i.ryspaev        ###   ########.fr        #
+#    Updated: 2021/05/20 22:29:25 by i.ryspaev        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,8 +46,11 @@ CC_FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
+$(NAME):		$(OBJS)
+					ar rcs $(NAME) $(OBJS)
+
 clean:
-			$(RM) &(OBJS)
+			$(RM) $(OBJS)
 
 fclean: clean
 			$(RM) $(NAME)
