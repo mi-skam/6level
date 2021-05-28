@@ -5,7 +5,9 @@ SRCs =	ft_strcpy.c \
 
 OBJs =	$(SRCs:.c=.o)
 
-NAME = libl_test
+TEST = libl_test
+
+LIB = libl.a
 
 CC=gcc
 
@@ -15,11 +17,16 @@ RM = rm -f
 
 .PHONY: all clean
 
-all: $(NAME)
+all: $(TEST)
 
 clean:
 	$(RM) $(OBJs)
-	$(RM) $(NAME)
+	$(RM) $(TEST)
+	$(RM) $(LIB)
 
-${NAME}: libl_test.c ${OBJs}
-	$(CC) $(CFLAGS) -o $@ $^
+$(LIB): $(OBJs)
+	ar rcs $(LIB) $(OBJs)
+
+$(TEST): libl_test.c $(LIB)
+	$(CC) $(CFLAGS) -o $@ $< -l:$(LIB) -L.
+
