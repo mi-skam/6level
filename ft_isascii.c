@@ -6,13 +6,14 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:53:36 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 00:47:49 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/29 19:00:23 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isascii(int c)
 {
-	return (c >= 0 && c < 128);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

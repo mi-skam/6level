@@ -6,29 +6,39 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:11:47 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/22 00:11:28 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/29 18:48:18 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+static int	my_isspace(char c)
 {
-	int i;
-	int is_neg;
-	int res;
-
-	if(!str)
+	if (c == '\t' || c == '\n' || c == '\r')
+		return (1);
+	else if (c == '\f' || c == '\v' || c == ' ')
+		return (1);
+	else
 		return (0);
-	i = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' \
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
-		i++;
-	is_neg = (str[i] == '-' ? -1 : 1);
-	if (is_neg == -1 || str[i] == '+')
-		i++;
+}
+
+int	ft_atoi(const char *str)
+{
+	int	res;
+	int	negative;
+
+	negative = 1;
 	res = 0;
-	while (str[i] >= '0' || str[i] <= '9')
-		res = (res * 10) + (str[i++] - '0');
-	return (res * is_neg);
+	while (my_isspace(*str))
+		str++;
+	if (*str == '-')
+	{
+		negative = -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+		res = (res * 10) + (*str++ - 48);
+	return (negative * res);
 }

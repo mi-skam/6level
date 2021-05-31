@@ -6,13 +6,14 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:48:04 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 00:49:49 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/29 19:01:54 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isdigit(int c)
 {
-	return (c >= '0' && c <= '9');
+	if (c > 47 && c < 58)
+		return (1);
+	else
+		return (0);
 }

@@ -6,15 +6,14 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:57:31 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 11:42:37 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/30 11:10:58 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	if (c > 64 && c < 91)
+		return (c + 32);
+	else
+		return (c);
 }

@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 18:22:07 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 11:24:00 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/30 10:45:26 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
+	char	*a;
 
-	if (!b)
-		return (NULL);
-	i = 0;
-	while (i < len)
+	a = (char *)b;
+	while (len > 0)
 	{
-		*(unsigned char *)(b + i) = (unsigned char)c;
-		i++;
+		*a++ = (char)c;
+		len--;
 	}
 	return (b);
 }

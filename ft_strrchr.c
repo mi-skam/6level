@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:40:56 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 11:41:55 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/30 11:08:18 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	pos;
 
-	i = 0;
-	while (s[i])
+	pos = ft_strlen(s);
+	if (s)
 	{
-		i++;
-	}
-	while (i >= 0)
-	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		while (s[pos] != (char)c && pos >= 0)
+			pos--;
+		if (s[pos] == (char)c)
+			return ((char *)&s[pos]);
+		else
+			return (NULL);
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 19:08:12 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 11:18:52 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/30 10:28:09 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,23 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	unsigned char	*sone;
+	unsigned char	*stwo;
 
-	i = 0;
-	while (i < n)
+	sone = (unsigned char *)s1;
+	stwo = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (*sone == *stwo & n-- > 0)
 	{
-		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
-			return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
-		i++;
+		sone++;
+		stwo++;
+		if (n == 0)
+			return (0);
+	}
+	if (*sone != *stwo)
+	{
+		return (*sone - *stwo);
 	}
 	return (0);
 }

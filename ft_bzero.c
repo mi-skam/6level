@@ -6,23 +6,20 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:45:16 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/22 00:16:12 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/29 18:49:40 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	char	*clean;
 
-	if (!s)
-		return ;
-	i = 0;
-	while (i < n)
+	clean = s;
+	while (n != 0)
 	{
-		*(char *)(s + i) = 0;
-		i++;
+		*clean++ = 0;
+		n--;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 19:11:24 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 11:34:32 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/30 10:59:17 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	len = 0;
+	while (*s++ != 0)
+	{
+		len++;
+	}
+	return (len);
 }

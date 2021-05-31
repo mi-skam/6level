@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 18:59:52 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 11:22:37 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/30 10:44:47 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,15 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	i;
+	char	*a;
+	char	*b;
 
-	if (!dst || !src)
-		return (NULL);
-	if (dst > src)
-	{
-		i = (int)len - 1;
-		while (i >= 0)
-		{
-			*(char *)(dst + 1) = *(char *)(src + i);
-			i--;
-		}
-	}
+	a = (char *)src;
+	b = (char *)dst;
+	if (a < b)
+		while (len--)
+			b[len] = a[len];
 	else
-	{
-		i = 0;
-		while (i < (int)len)
-		{
-			*(char *)(dst + i) = *(char *)(src + i);
-			i++;
-		}
-	}
+		ft_memcpy(b, a, len);
 	return (dst);
 }

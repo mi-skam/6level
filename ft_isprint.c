@@ -6,13 +6,14 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:54:55 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 00:50:14 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/30 10:22:09 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isprint(int c)
 {
-	return (c >= 32 && c <= 126);
+	if (c >= ' ' && c <= '~')
+		return (1);
+	else
+		return (0);
 }

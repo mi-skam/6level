@@ -6,27 +6,26 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:04:04 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2021/05/23 11:33:06 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2021/05/30 18:40:26 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strlcpy(char *dest, const char *src, size_t len)
 {
-	size_t	i;
+	char	*final;
 
-	i = 0;
-	if (size > 0)
+	final = dest;
+	while (*src != 0 && len > 0)
 	{
-		while (src[i] && i < (size - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = 0;
+		*dest++ = *src++;
+		len--;
 	}
-	while (src[i])
-		i++;
-	return (i);
+	while (len > 0)
+	{
+		*dest++ = 0;
+		len--;
+	}
+	return (final);
 }
