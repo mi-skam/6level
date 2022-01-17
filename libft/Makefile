@@ -1,4 +1,4 @@
-SRCS			=	ft_atoi.c ft_bzero.c
+SRCS			=	ft_atoi.c ft_bzero.c ft_isalpha.c
 
 OBJS			= $(SRCS:.c=.o)
 
