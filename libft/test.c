@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 19:06:46 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/17 20:05:44 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/01/18 17:41:17 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,4 +94,7 @@ int main(int argc, char const *argv[]) {
 
 	printf("\n---isalpha---");
 	test_char_ft(&isalpha, &ft_isalpha);
+
+	printf("\n---isdigit---");
+	test_char_ft(&isdigit, &ft_isdigit);
 }
