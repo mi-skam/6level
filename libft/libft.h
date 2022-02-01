@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:25:56 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/26 19:22:22 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/01 17:52:57 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int 	ft_tolower(int c);
 int 	ft_toupper(int c);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 int     ft_atoi(const char *str);
 void    ft_bzero(void *s, size_t n);

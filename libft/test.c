@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 19:06:46 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/30 19:00:48 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/01 18:07:46 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <fcntl.h>
+#include <errno.h>
 
 #include "libft.h"
 
@@ -49,8 +51,25 @@ void test_char_ft(int (*org)(int), int (*ft)(int)) {
 	printf("\n");
 }
 
+char strupper_and_one(unsigned int idx, char c) {
+	if (idx == 0) {
+		return ('1');
+	}
+	return (ft_toupper(c));
+}
+
+int	_c_in_set(char c, char const *set) {
+	int	i;
+
+	i = 0;
+	while (set[i])
+		if ((unsigned char)set[i++] == (unsigned char)c)
+			return (1);
+	return (0);
+}
+
 int main(int argc, char const *argv[]) {
-	// int	j;
+	int	j;
 	(void) argc;
 	(void) argv;
 
@@ -171,6 +190,28 @@ int main(int argc, char const *argv[]) {
 		}
 		i++;
 		free(str_itoa);
+	}
+	printf("\n");
+
+	/*
+	memccpy
+	*/
+	printf("\n---memccpy---[string|memccpy|yours]\n");
+
+	int memccpy_length = 0;
+	char	str_dest[250] = "";
+	char	str_ft_dest[250] = "";
+	i = 0;
+	while (i < argc) {
+		memccpy_length = strlen(argv[i]);
+		memccpy(str_dest, argv[i], 'c', memccpy_length);
+		ft_memccpy(str_ft_dest, argv[i], 'c', memccpy_length);
+		if (strcmp(str_dest, str_ft_dest) == 0) {
+			printf("G");
+		} else {
+			printf("[%s|%s|%s]", argv[i], str_dest, str_ft_dest);
+		}
+		i++;
 	}
 	printf("\n");
 
