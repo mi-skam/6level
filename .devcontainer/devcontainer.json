@@ -8,13 +8,22 @@
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
-		"terminal.integrated.shell.profiles.linux": "/bin/bash"
+	"settings": {
+		"terminal.integrated.shell.profiles.linux": "/bin/bash",
+		"norminette.command": "norminette",
+		"norminette.fileregex": "^ft.*\\.[ch]$",
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.renderWhitespace": "all",
+		"editor.detectIndentation": false,
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true,
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-vscode.cpptools"
+		"kube.42header",
+		"dalexhd.42-norminette"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
