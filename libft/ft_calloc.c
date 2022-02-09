@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:07:33 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 23:04:56 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 21:14:18 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void
 {
 	void	*ptr;
 
-	ptr = (void*)malloc(count * size);
+	ptr = (void *)malloc(count * size);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count);
