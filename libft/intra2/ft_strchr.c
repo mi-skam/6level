@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 23:23:34 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 23:23:37 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 23:30:25 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ char
 	while (s[i])
 	{
 		if (s[i] == (char)c)
-			return ((char*)(s + i));
+			return ((char *)(s + i));
 		i++;
 	}
 	if (s[i] == (char)c)
-		return ((char*)(s + i));
+		return ((char *)(s + i));
 	return (NULL);
 }

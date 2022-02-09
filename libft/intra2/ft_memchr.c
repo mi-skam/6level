@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:08:52 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 19:08:55 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 22:47:33 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void
 	i = 0;
 	while (i < n)
 	{
-		if (*(unsigned char*)(s + i) == (unsigned char)c)
-			return ((void*)(s + i));
+		if (*(unsigned char *)(s + i) == (unsigned char)c)
+			return ((void *)(s + i));
 		i++;
 	}
 	return (NULL);
