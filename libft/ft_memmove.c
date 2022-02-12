@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:10:48 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 23:04:09 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 22:49:05 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void
 		i = (int)len - 1;
 		while (i >= 0)
 		{
-			*(char*)(dst + i) = *(char*)(src + i);
+			*(char *)(dst + i) = *(char *)(src + i);
 			i--;
 		}
 	}
@@ -33,7 +33,7 @@ void
 		i = 0;
 		while (i < (int)len)
 		{
-			*(char*)(dst + i) = *(char*)(src + i);
+			*(char *)(dst + i) = *(char *)(src + i);
 			i++;
 		}
 	}

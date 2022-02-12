@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 23:28:21 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 23:28:24 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 23:35:15 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ char
 	size_t	i;
 	size_t	j;
 
-	str = (char*)malloc(
-		sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;

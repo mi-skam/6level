@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:12:07 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 23:02:41 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 22:49:29 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void
 	i = 0;
 	while (i < len)
 	{
-		*(unsigned char*)(b + i) = (unsigned char)c;
+		*(unsigned char *)(b + i) = (unsigned char)c;
 		i++;
 	}
 	return (b);

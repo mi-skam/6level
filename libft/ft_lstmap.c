@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 00:05:46 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/26 00:05:49 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 22:13:55 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ t_list
 	first = NULL;
 	while (lst)
 	{
-		if (!(new = ft_lstnew((*f)(lst->content))))
+		new = ft_lstnew((*f)(lst->content));
+		if (!(new))
 		{
 			while (first)
 			{

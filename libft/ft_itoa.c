@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 19:08:22 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 23:04:39 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 21:59:50 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 static int
 	ft_abs(int nbr)
 {
-	return ((nbr < 0) ? -nbr : nbr);
+	if (nbr < 0)
+		return (-nbr);
+	else
+		return (nbr);
 }
 
 static void
@@ -44,7 +47,8 @@ char
 	size_t	length;
 
 	is_neg = (n < 0);
-	if (!(str = ft_calloc(11 + is_neg, sizeof(*str))))
+	str = ft_calloc(11 + is_neg, sizeof(*str));
+	if (!(str))
 		return (NULL);
 	if (n == 0)
 		str[0] = '0';

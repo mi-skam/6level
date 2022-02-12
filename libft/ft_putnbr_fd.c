@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 23:05:34 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 23:05:38 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 22:51:06 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 static int
 	ft_abs(int nbr)
 {
-	return ((nbr < 0) ? -nbr : nbr);
+	if (nbr < 0)
+		return (-nbr);
+	else
+		return (nbr);
 }
 
 void

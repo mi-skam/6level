@@ -6,7 +6,7 @@
 /*   By: i.ryspaev <i.ryspaev@student.42.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 23:22:52 by i.ryspaev         #+#    #+#             */
-/*   Updated: 2022/01/25 23:22:56 by i.ryspaev        ###   ########.fr       */
+/*   Updated: 2022/02/09 22:53:11 by i.ryspaev        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char
 			total++;
 		i++;
 	}
-	split = (char**)malloc(sizeof(s) * (total + 2));
+	split = (char **)malloc(sizeof(s) * (total + 2));
 	if (!split)
 		return (NULL);
 	return (split);
@@ -94,7 +94,8 @@ char
 {
 	char	**split;
 
-	if (!(split = ft_alloc_split(s, c)))
+	split = ft_alloc_split(s, c);
+	if (!(split))
 		return (NULL);
 	if (!ft_split_by_char(split, s, c))
 		return (NULL);
